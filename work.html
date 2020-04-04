@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="interactive web design">
+    <meta name="autor" content="Adi Aharonov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Blogin</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+<header>
+    <main class=" container">
+        <div class="logo"><span class="B">B</span>login<span class="dot">.</span>
+        </div>
+        <ul class="main-nav">
+            <li class="pagelink"><a href="index.html" >Journal</a></li>
+            <li class="pagelink"><a href="about.html">About</a></li>
+            <li class="current pagelink"><a href="work.html">Work</a></li>
+            <li class="pagelink"><a href="contact.html">Contact</a></li>
+        </ul>
+    </main>
+</header>
+
+
+
+<section class="hiddenMenu">
+    <div class="menuBtn">
+        <div class="navBtnContainer" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="navBarMobileMenu" id="navBarMobileMenu">
+    </div>
+</section>
+
+
+
+<footer class="container flex column space-between">
+    <div class="logo">Blogin<span class="dot">.</span></div>
+    <p>© 2020 Blogin.com - All Rights Reserved</p>
+    <ul>
+        <li>
+            <img src="/image/F.png">
+        </li>
+        <li>
+            <img src="/image/T.png">
+        </li>
+        <li>
+            <img src="/image/B.png">
+        </li>
+        <li>
+            <img src="/image/D.png">
+        </li>
+    </ul>
+</footer>
+
+<script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+      const header = document.getElementById('navBarMobileMenu');
+      const pageLinks = document.querySelectorAll('.pagelink');
+      (header.style.top === "100px") ? header.style.top = "0px" : header.style.top = "100px";
+      
+      if (pageLinks[0].style.opacity === "1") {
+
+      pageLinks.forEach(link => {
+          link.style.opacity = "0"
+      });
+     
+      } else {
+        pageLinks.forEach(link => {
+          link.style.opacity = "1"
+      });
+        }
+    }
+</script>
+    
+</body>
+</html>
