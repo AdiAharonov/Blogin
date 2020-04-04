@@ -10,7 +10,7 @@
 }
 @font-face {
     font-family: Latobold;
-    src: url(/fonts/Lato-Bold.ttf);
+    src: url(/fonts/Lato-Bold.ttf.ttf);
 }
 @font-face {
     font-family: Eurofurenceregular;
@@ -434,3 +434,10 @@ article button {
 }
 
 } 
+
+@media (max-width: 600px) {
+    header li {
+     margin: 0 25px;
+    }
+
+}
