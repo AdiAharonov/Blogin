@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Blogin</title>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -17,7 +17,14 @@
         <div class="logo"><span class="B">B</span>login<span class="dot">.</span>
         </div>
         <ul class="main-nav">
-            <li class="current pagelink"><a href="index.html" >Journal</a></li>
+            <li class="current pagelink dropdown"><a href="index.html" >Journal</a>
+            <div class="dropdown-content">
+                <a href="#">March 2020 </a>
+                <a href="#">Febuary 2020 </a>
+                <a href="#">July 2020 </a>
+                <a href="#">Dcember 2019 </a>
+            </div>
+            </li>
             <li class="pagelink"><a href="about.html">About</a></li>
             <li class="pagelink"><a href="work.html">Work</a></li>
             <li class="pagelink"><a href="contact.html">Contact</a></li>
@@ -39,31 +46,51 @@
     </div>
 </section>
 
+<section class="screen flex align-center justify-center">
+    <main class="modal">
+        <i class="fas fa-times" onclick="onCloseModal()"></i>
+        <h3>Subsribe to our chanel</h3>
+        <p>Join us to get access to the latest stories!</p>
+        <div class="emailBox">
+            <h4>Enter your E-mail here: </h4>
+            <input class="emailInput" type="email" placeholder="Enter E-mail...">
+            <button class="submitBtn" onclick="onCloseModal()">Submit</button>
+        </div>
+    </main>
+    
+</section>
+
 <section class="container main ">
     <div class="content-box flex firstImg">
         <img src="images/001.png" >
         <article>
-            <h2>Heading 1</h2>
-            <p>Lorem, ipsum dolo 
-                elitoriosam ipsa magni odit totDeserunt necessitatibus ex accusamus reiciendis, in sapiente ad perferendis totam? tenetur officiis, quo pariatur nulla id culpa eligendi, dolor cumque necessitatibus recusandae ab voluptate? Temporibus expedita totam repudiandae rerum rem...</p>
-            <button class="open-article">Continue Reading</button>
+            <h2>Duis aute irure dolor in 
+                henderit in voluptate.</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+            <button class="open-article" onclick="onContinueRead()">Continue Reading</button>
         </article>
     </div>
     <div class="content-box flex">
         <img src="images/002.png">
         <article>
-         <h2>Heading 2 dsfsdf dfgdfg gh</h2>
-            <p>Lorem iaepe nihpsum dolorem quae. Illum dicta e Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae modi tenetur officiis, quo pariatur nulla id culpa eligendi, dolor cumque necessitatibus recusandae ab voluptate? Temporibus expedita totam repudiandae rerum re...</p>
-            <button class="open-article">Continue Reading</button>
+         <h2>Duis aute irure dolor in 
+            henderit in voluptate.</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+            <button class="open-article" onclick="onContinueRead()">Continue Reading</button>
 
         </article>
     </div>
     <div class="content-box flex">
         <img src="images/003.png">
         <article>
-            <h2>Heading 3</h2>
+            <h2>Duis aute irure dolor in 
+                henderit in voluptate.</h2>
             <p>Lorem, iandae aLorctetur, adipisicing elit. Perspiciatis, reiciendis quia repudiandae unde possimus et explicabo laudantium ex, eveniet nisi modi id similique nesciunt dignissimos ipsam distinctio tempore odio ipsa. totam repudiandae rerum re...</p>
-            <button class="open-article">Continue Reading</button>
+            <button class="open-article" onclick="onContinueRead()">Continue Reading</button>
 
         </article>
     </div>
@@ -76,7 +103,7 @@
 
 <footer class="container flex column space-between">
     <div class="logo">Blogin<span class="dot">.</span></div>
-    <p>© 2020 Blogin.com - All Rights Reserved</p>
+    <p>© 2020 Blogin.com - All Rights Reserved  -  Find more free Templates at Pixelhint.com</p>
     <ul>
         <li class="fab fa-facebook-f">
            
@@ -112,6 +139,21 @@
       });
         }
     }
+
+    function onContinueRead() {
+        const modal = document.querySelector('.screen');
+        modal.style.opacity = "1";
+        modal.style.zIndex = "1";
+    }
+
+      
+    function   onCloseModal() {
+        const modal = document.querySelector('.screen');
+        modal.style.opacity = "0";
+        modal.style.zIndex = "-1";
+    }
+
+
 </script>
 
 <script src="https://kit.fontawesome.com/6516eda782.js" crossorigin="anonymous"></script>
