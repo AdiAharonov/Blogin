@@ -613,5 +613,13 @@ article button {
 }
 
 
+@media (max-width: 500px) {
+    
+    .content-box article p  {
+        margin: 30px 0;
+    }
+} 
+
+
 
 
