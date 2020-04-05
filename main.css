@@ -614,10 +614,16 @@ article button {
 
 
 @media (max-width: 500px) {
-    
+
     .content-box article p  {
-        margin: 50px 0;
+        margin-top: 20px
     }
+
+    .modal p {
+        margin-top: 50px;
+        font-size:14px;
+    }
+
 } 
 
 
